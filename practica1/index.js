@@ -1,16 +1,22 @@
+//To use env files and avoid exposing API keys
 require('dotenv').config()
+//Http request
 const axios = require('axios');
+//Ask values to user
 const prompt = require('prompt-sync')({ sigint: true });
 
+//Gorest token
 const varToken = process.env.GOREST_TOKEN;
 
 //Axios global headers
 axios.defaults.headers.common['Content-Type'] = 'application/json' ;
 axios.defaults.headers.common['Authorization'] = 'Bearer ' + varToken;
 
+//Function to create a user
 const crearUsuario = async () => {
   const nombre = prompt('Nombre: ');
   const carnet = prompt('Carnet: ');
+  //Post request with axios
   try {
     const res = await axios({
       method: 'post',
@@ -18,7 +24,7 @@ const crearUsuario = async () => {
       data: {
         name: nombre,
         gender: 'Male',
-        email: carnet+'@ingenieria.usac.edu.gt',
+        email: carnet+'@mail.com',
         status: 'Active'
       }
     })
@@ -28,9 +34,11 @@ const crearUsuario = async () => {
   }
 }
 
+//Getting a user by id
 const listarUsuario = async () => {
   const id = prompt('ID del usuario: ');
   try {
+    //Get request with axios
     const res = await axios({
       method: 'get',
       url: `https://gorest.co.in/public-api/users/${id}`
@@ -41,17 +49,19 @@ const listarUsuario = async () => {
   }
 }
 
+//Modifying user's name and email by id
 const modificarUsuario = async () => {
   const id = prompt('ID del usuario: ');
   const nombre = prompt('Nombre nuevo: ');
   const carnet = prompt('Carnet nuevo: ');
   try {
+    //Patch request with axios
     const res = await axios({
       method: 'patch',
       url: `https://gorest.co.in/public-api/users/${id}`,
       data: {
         name: nombre,
-        email: carnet+'@ingenieria.usac.edu.gt',
+        email: carnet+'@mail.com',
       }
     })
     console.log(res.data);
@@ -60,9 +70,11 @@ const modificarUsuario = async () => {
   }
 }
 
+//Deleting a user by id
 const borrarUsuario = async () => {
   const id = prompt('ID del usuario a eliminar: ');
   try {
+    //Delete request with axios
     const res = await axios({
       method: 'delete',
       url: `https://gorest.co.in/public-api/users/${id}`
@@ -73,7 +85,7 @@ const borrarUsuario = async () => {
   }
 }
 
-//Menu
+//Auto call anonymous function to show a menu
 (async () => {
   let option = 0;
   while (option != 5) {
