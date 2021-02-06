@@ -22,6 +22,8 @@ Aplicación de consola desarrollada con **Nodejs** donde se hace uso de peticion
 
 5. Se mostrará un menú en consola, el cual puede ser utilizado para realizar las operaciones correspondientes.
 
+6. Las pruebas de funcionamiento pueden encontrarse en el siguiente enlace: [Pruebas de funcionamiento](https://github.com/dmomotic/practicas-sa/blob/practica1/practica1/documentacion/Pruebas%20de%20funcionalidad.pdf)
+
    
 
 
