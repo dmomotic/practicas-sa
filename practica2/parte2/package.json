@@ -1,0 +1,15 @@
+{
+  "name": "practica2-parte2",
+  "version": "1.0.0",
+  "description": "Parte 2 de la practica #2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Momotic",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "strong-soap": "^3.0.0"
+  }
+}
