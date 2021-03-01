@@ -188,3 +188,133 @@ Aplicación de consola desarrollada con **Nodejs** que simula 3 microservicios p
        ```
 
        
+
+### Práctica 4
+
+Aplicación de consola desarrollada con **Nodejs** que simula el uso de un **Enterprise Service Bus** y 3 microservicios para: **clientes**, **restaurantes** y **repartidores**.  
+
+- [Pruebas de funcionamiento](https://github.com/dmomotic/practicas-sa/blob/practica4/practica4/documentacion/Pruebas%20de%20funcionalidad.pdf)
+- [Video demostrativo](https://drive.google.com/file/d/12heuYXyt1xZE33QN2R6pjnyVwYRc3q3_/view?usp=sharing)
+
+##### Instrucciones para replicar la práctica
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica4](https://github.com/dmomotic/practicas-sa/tree/practica4)
+
+2. Descomprimir el contenido y dirigirse a la carpeta "practica4"
+
+3. Ejecutar en una consola el comando `node index.js` para cada uno de los microservicios y el enterprise service bus.
+
+4. Puede utilizar la herramienta **postman**  para probar el funcionamiento de cada endpoint.
+
+5. **Microservicio Cliente**
+
+   - POST: http://localhost:3030/api/cliente/solicitar-pedido
+
+     - Body:
+
+       ```json
+       {
+           "restaurante": "Del Puente",
+           "comida": ["hamburguesa", "papas", "fresco"]
+       }
+       ```
+
+       
+
+   - GET: http://localhost:3030/api/cliente/verificar-pedido-restaurante?pedidoId=1
+
+     - Params
+
+       ```
+       pedidoId: 1
+       ```
+
+       
+
+   - GET: http://localhost:3030/api/cliente/verificar-pedido-repartidor?pedidoId=1
+
+     - Paramas
+
+       ```
+       pedidoId: 1
+       ```
+
+       
+
+6. **Microservicio Restaurante**
+
+   - POST: http://localhost:3030/api/restaurante/recibir-pedido
+
+     - Body:
+
+       ```json
+       {
+           "restaurante": "Del Puente",
+           "comida": ["hamburguesa", "papas", "fresco"]
+       }
+       ```
+
+       
+
+   - POST: http://localhost:3030/api/restaurante/informar-estado-cliente
+
+     - Body:
+
+       ```json
+       {
+           "pedidoId": 1
+       }
+       ```
+
+       
+
+   - POST: http://localhost:3030/api/restaurante/informar-estado-repartidor
+
+     - Body:
+
+       ```json
+       {
+           "pedidoId": 1
+       }
+       ```
+
+       
+
+7. **Microservicio Repartidor**
+
+   - POST: http://localhost:3030/api/repartidor/recibir-pedido
+
+     - Body:
+
+       ```json
+       {
+           "restaurante": "Del Puente",
+           "comida": ["hamburguesa", "papas", "fresco"]
+       }
+       ```
+
+       
+
+   - POST: http://localhost:3030/api/repartidor/informar-estado-cliente
+
+     - Body:
+
+       ```json
+       {
+           "pedidoId": 1
+       }
+       ```
+
+       
+
+   - POST: http://localhost:3030/api/repartidor/marcar-pedido-entregado
+
+     - Body:
+
+       ```json
+       {
+           "pedidoId": 1
+       }
+       ```
+
+       
