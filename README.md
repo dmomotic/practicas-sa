@@ -194,6 +194,7 @@ Aplicación de consola desarrollada con **Nodejs** que simula 3 microservicios p
 Aplicación de consola desarrollada con **Nodejs** que simula el uso de un **Enterprise Service Bus** y 3 microservicios para: **clientes**, **restaurantes** y **repartidores**.  
 
 - [Pruebas de funcionamiento](https://github.com/dmomotic/practicas-sa/blob/practica4/practica4/documentacion/Pruebas%20de%20funcionalidad.pdf)
+- [Video demostrativo](https://drive.google.com/file/d/12heuYXyt1xZE33QN2R6pjnyVwYRc3q3_/view?usp=sharing)
 
 ##### Instrucciones para replicar la práctica
 
