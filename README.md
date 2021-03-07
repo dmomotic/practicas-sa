@@ -9,6 +9,8 @@ Las practicas se encuentran cada una en su respectiva rama.
   - [parte 1](https://github.com/dmomotic/practicas-sa/tree/practica2/practica2/parte1)
   - [parte 2](https://github.com/dmomotic/practicas-sa/tree/practica2/practica2/parte2)
 - [Práctica 3](https://github.com/dmomotic/practicas-sa/tree/practica3)
+- [Práctica 4](https://github.com/dmomotic/practicas-sa/tree/practica4)
+- [Práctica 5](https://github.com/dmomotic/practicas-sa/tree/practica5)
 
 
 
@@ -318,3 +320,17 @@ Aplicación de consola desarrollada con **Nodejs** que simula el uso de un **Ent
        ```
 
        
+
+### Práctica 5
+
+Aplicación de consola desarrollada con **Nodejs** donde se crea un *artefacto* para cada microservicio, por medio de la compresión de archivos.  
+
+- [Pruebas de funcionamiento](https://github.com/dmomotic/practicas-sa/blob/practica5/practica5/documentacion/Pruebas%20de%20funcionalidad.pdf)
+
+##### Instrucciones para replicar la práctica
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica5](https://github.com/dmomotic/practicas-sa/tree/practica5)
+2. Descomprimir el contenido y dirigirse a la carpeta *practica5* y luego a la carpeta *builder*
+3. Ejecutar el comando `npm install` para instalar las dependencias necesarias para el funcionamiento del proyecto
+4. Ejecutar en una consola el comando `node index.js`
+5. Se crearán 3 archivos comprimidos *.zip* uno por cada microservicio dentro de la carpeta `dist` con el contenido necesario para la ejecución de los mismos
