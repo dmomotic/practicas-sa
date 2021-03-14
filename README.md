@@ -11,6 +11,7 @@ Las practicas se encuentran cada una en su respectiva rama.
 - [Práctica 3](https://github.com/dmomotic/practicas-sa/tree/practica3)
 - [Práctica 4](https://github.com/dmomotic/practicas-sa/tree/practica4)
 - [Práctica 5](https://github.com/dmomotic/practicas-sa/tree/practica5)
+- [Práctica 6](https://github.com/dmomotic/practicas-sa/tree/practica6)
 
 
 
@@ -334,3 +335,19 @@ Aplicación de consola desarrollada con **Nodejs** donde se crea un *artefacto* 
 3. Ejecutar el comando `npm install` para instalar las dependencias necesarias para el funcionamiento del proyecto
 4. Ejecutar en una consola el comando `node index.js`
 5. Se crearán 3 archivos comprimidos *.zip* uno por cada microservicio dentro de la carpeta `dist` con el contenido necesario para la ejecución de los mismos
+
+
+
+### Práctica 6
+
+Aplicación de consola desarrollada con **Nodejs** donde se implementaron pruebas unitarias para el microservicio **cliente** con la herramienta **jest** y se realizo un análisis al microservicio con **Sonarqube**.  
+
+- [Pruebas de funcionamiento](https://drive.google.com/file/d/1Bb28jqMSbDtikDmNnm3qzLe48FSb6UT_/view?usp=sharing)
+
+##### Instrucciones para replicar la práctica
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica6](https://github.com/dmomotic/practicas-sa/tree/practica6)
+2. Descomprimir el contenido y dirigirse a la carpeta *practica6* y luego a la carpeta *cliente*
+3. Ejecutar el comando `npm install` para instalar las dependencias necesarias para el funcionamiento del proyecto
+4. Ejecutar en una consola el comando `node index.js`
+5. Si se desea ejecutar las pruebas unitarias se puede ejecutar el comando `jest`
