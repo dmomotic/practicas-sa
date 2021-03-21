@@ -1,0 +1,37 @@
+image: node:alpine
+
+stages:
+  - test
+  - code_quality
+  - build_and_publish_artifacts
+
+include:
+  - template: Code-Quality.gitlab-ci.yml
+
+test:
+  stage: test
+  script:
+    - cd cliente
+    - npm install
+    - npm run test
+  only:
+    - master
+
+code_quality:
+  stage: code_quality
+  artifacts:
+    expose_as: 'Code Quality Report'
+    paths: [gl-code-quality-report.json]
+    expire_in: 2 week
+
+build_and_publish_artifacts:
+  stage: build_and_publish_artifacts
+  script:
+    - cd builder
+    - npm install
+    - node index
+  artifacts:
+    paths: [builder/dist/cliente.zip]
+    expire_in: 2 week
+  only:
+  - master
