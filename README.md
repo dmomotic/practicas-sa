@@ -12,6 +12,7 @@ Las practicas se encuentran cada una en su respectiva rama.
 - [Práctica 4](https://github.com/dmomotic/practicas-sa/tree/practica4)
 - [Práctica 5](https://github.com/dmomotic/practicas-sa/tree/practica5)
 - [Práctica 6](https://github.com/dmomotic/practicas-sa/tree/practica6)
+- [Práctica 7](https://github.com/dmomotic/practicas-sa/tree/practica7)
 
 
 
@@ -351,3 +352,37 @@ Aplicación de consola desarrollada con **Nodejs** donde se implementaron prueba
 3. Ejecutar el comando `npm install` para instalar las dependencias necesarias para el funcionamiento del proyecto
 4. Ejecutar en una consola el comando `node index.js`
 5. Si se desea ejecutar las pruebas unitarias se puede ejecutar el comando `jest`
+
+
+
+### Práctica 7
+
+- [Pruebas de funcionamiento](https://drive.google.com/file/d/1HzG2zBGFDJXT8NfZPO_DTNS4AHjgsoeI/view?usp=sharing)
+
+Aplicación de consola desarrollada con **Nodejs** donde se implementaron pruebas de sistema para el microservicio **cliente** con la herramienta **jest** y se implementó un **pipeline** en **Gitlab** el cual consta de las siguientes etapas:
+
+- Ejecución de pruebas
+- Revisión de estándares y calidad del código  
+- Construcción y publicación de artefactos
+
+##### Repositorio de Gitlab
+
+- [https://gitlab.com/dmomotic/sa-practica7/-/tree/master](https://gitlab.com/dmomotic/sa-practica7/-/tree/master)
+
+##### Pipeline
+
+- [https://gitlab.com/dmomotic/sa-practica7/-/pipelines](https://gitlab.com/dmomotic/sa-practica7/-/pipelines)
+
+##### Artefactos
+
+- [https://gitlab.com/dmomotic/sa-practica7/-/jobs/1115617667/artifacts/download](https://gitlab.com/dmomotic/sa-practica7/-/jobs/1115617667/artifacts/download)
+
+
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica7](https://github.com/dmomotic/practicas-sa/tree/practica7)
+2. Descomprimir el contenido y dirigirse a la carpeta *practica7* y luego a la carpeta *cliente*
+3. Ejecutar el comando `npm install` para instalar las dependencias necesarias para el funcionamiento del proyecto
+4. Ejecutar en una consola el comando `node index.js`
+5. Si se desea ejecutar las pruebas unitarias se puede ejecutar el comando `npm run test`
+6. Para generar el artefacto manualmente, dirigirse a la carpeta *builder* y ejecutar `npm install`
+7. Ejecutar el comando `node index.js` y dentro de la carpeta *dist* se creará el archivo *cliente.zip*
