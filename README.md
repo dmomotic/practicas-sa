@@ -13,6 +13,7 @@ Las practicas se encuentran cada una en su respectiva rama.
 - [Práctica 5](https://github.com/dmomotic/practicas-sa/tree/practica5)
 - [Práctica 6](https://github.com/dmomotic/practicas-sa/tree/practica6)
 - [Práctica 7](https://github.com/dmomotic/practicas-sa/tree/practica7)
+- [Práctica 8](https://github.com/dmomotic/practicas-sa/tree/practica8)
 
 
 
@@ -386,3 +387,21 @@ Aplicación de consola desarrollada con **Nodejs** donde se implementaron prueba
 5. Si se desea ejecutar las pruebas unitarias se puede ejecutar el comando `npm run test`
 6. Para generar el artefacto manualmente, dirigirse a la carpeta *builder* y ejecutar `npm install`
 7. Ejecutar el comando `node index.js` y dentro de la carpeta *dist* se creará el archivo *cliente.zip*
+
+
+
+### Práctica 8
+
+- [Pruebas de funcionamiento](https://drive.google.com/file/d/1uB7uIebWnDXZecUqjvMlii516tVSa6VW/view?usp=sharing)
+
+Implementación de 2 **contenedores** uno con **mongo** y otro con una aplicación de **node**, se utiliza **docker compose** para correr ambos contenedores y se expone en el **puerto 80** la ruta **/containers** y cada vez que se accede a esta ruta, el contenedor con **node** inserta dos datos al la base de datos del contenedor de **mongo** y posteriormente devuelve todos los datos registrados en formato **json**.
+
+
+
+##### Instrucciones para replicar la práctica
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica8](https://github.com/dmomotic/practicas-sa/tree/practica8)
+2. Descomprimir el contenido y dirigirse a la carpeta *practica8*.
+3. Dentro de la carpeta *server* ejecutar `npm install`
+4. Dentro de la carpeta *practica8* ejecutar el comando `docker-compose up -d`
+5. Visitar la ruta http://localhost/containers donde se podrá observar cada vez que se ingrese a la página como se registran 2 usuarios y se despliega la lista completa.
