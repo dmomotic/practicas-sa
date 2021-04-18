@@ -14,6 +14,7 @@ Las practicas se encuentran cada una en su respectiva rama.
 - [Práctica 6](https://github.com/dmomotic/practicas-sa/tree/practica6)
 - [Práctica 7](https://github.com/dmomotic/practicas-sa/tree/practica7)
 - [Práctica 8](https://github.com/dmomotic/practicas-sa/tree/practica8)
+- [Práctica 9](https://github.com/dmomotic/practicas-sa/tree/practica9)
 
 
 
@@ -405,3 +406,21 @@ Implementación de 2 **contenedores** uno con **mongo** y otro con una aplicaci�
 3. Dentro de la carpeta *server* ejecutar `npm install`
 4. Dentro de la carpeta *practica8* ejecutar el comando `docker-compose up -d`
 5. Visitar la ruta http://localhost/containers donde se podrá observar cada vez que se ingrese a la página como se registran 2 usuarios y se despliega la lista completa.
+
+
+
+### Práctica 9
+
+- [Pruebas de funcionamiento](https://drive.google.com/file/d/1xGcOfqZJ29IzgP75s1lQUBpuHBFbwF0E/view?usp=sharing)
+
+Se tomó como base la práctica 8, únicamente se agrego un contenedor intermedio para poder realizar la carga a la base de datos mongo utilizando un  **volume**  y un archivo **json**.
+
+
+
+##### Instrucciones para replicar la práctica
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica9](https://github.com/dmomotic/practicas-sa/tree/practica9)
+2. Descomprimir el contenido y dirigirse a la carpeta *practica9*.
+3. Dentro de la carpeta *server* ejecutar `npm install`
+4. Dentro de la carpeta *practica9* ejecutar el comando `docker-compose up -d`
+5. Visitar la ruta http://localhost/containers donde se podrá observar los datos que fueron cargados desde el archivo *json*.
