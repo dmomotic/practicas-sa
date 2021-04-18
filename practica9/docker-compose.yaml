@@ -1,0 +1,30 @@
+version: "3.8"
+services: 
+  mongodb:
+    image: mongo:latest
+    container_name: my-mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+  mongoimport:
+    image: library/mongo:latest
+    container_name: my-import
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    volumes:
+      - ./data/data.json:/src/data/data.json
+    command: mongoimport --authenticationDatabase admin -u root -p example --host mongodb --db mydatabase --collection students --type json --file /src/data/data.json --jsonArray
+  server:
+    image: server
+    container_name: my-server
+    depends_on: 
+      - mongoimport
+    ports: 
+      - '80:80'
