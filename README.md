@@ -16,6 +16,8 @@ Las practicas se encuentran cada una en su respectiva rama.
 - [Práctica 8](https://github.com/dmomotic/practicas-sa/tree/practica8)
 - [Práctica 9](https://github.com/dmomotic/practicas-sa/tree/practica9)
 - [Práctica 10](https://github.com/dmomotic/practicas-sa/tree/practica10)
+- [Práctica 11](https://github.com/dmomotic/practicas-sa/tree/practica11)
+- [Práctica 12](https://github.com/dmomotic/practicas-sa/tree/practica12)
 
 
 
@@ -437,3 +439,54 @@ Se tomó como base la práctica 7, únicamente se agrego un stage para dockeriza
 1. [Repositorio en Gitlab](https://gitlab.com/dmomotic/sa-practica7/-/tree/practica10)
 2. [Pipeline](https://gitlab.com/dmomotic/sa-practica7/-/pipelines/291583058)
 
+
+
+### Práctica 11
+
+- [Pruebas de funcionamiento](https://drive.google.com/file/d/1c_VcxolDMF-7Ncgkap_B6_bnPAmPWKo0/view?usp=sharing)
+
+Uso de **Terraform** como **Infrastructure as Code** (IaC) para la creación de una máquina virtual en Google Cloud Platform, donde se muestra un "Hola mundo" con **Nodejs**.
+
+##### Instrucciones para replicar la práctica
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica11](https://github.com/dmomotic/practicas-sa/tree/practica11)
+
+2. Descomprimir el contenido y dirigirse a la carpeta *practica11*.
+
+3. Dentro del archivo `main.tf` sustituir el archivo de credenciales que genera Google Cloud a través del servicio `IAM`
+
+4. Ejecutar los siguientes comandos, según sea necesario:
+
+   ```bash
+   terraform init
+   terraform plan
+   terraform apply
+   terraform destroy
+   ```
+
+
+
+### Práctica 12
+
+- [Pruebas de funcionamiento](https://drive.google.com/file/d/1rszwq3Eotw0PQCBTJxuq-FEhygUjkOpT/view?usp=sharing)
+
+Uso de **Terraform** para duplicar máquina virtual en **Google Cloud Platform** utilizando el comando **import**, para obtener la base de los archivos de configuración para los distintos objetos.
+
+1. Descargar código de: [https://github.com/dmomotic/practicas-sa/tree/practica12](https://github.com/dmomotic/practicas-sa/tree/practica12)
+
+2. Descomprimir el contenido y dirigirse a la carpeta *practica12*.
+
+3. Dentro del archivo `main.tf` de los 2 subdirectorios sustituir el archivo de credenciales que genera Google Cloud a través del servicio `IAM`
+
+4. Ejecutar los siguientes comandos, según sea necesario:
+
+   ```bash
+   terraform init
+   terraform plan
+   terraform apply
+   terraform destroy
+   terraform import google_compute_instance.default {{project}}/{{zone}}/{{vpc-name}}
+   terraform import google_compute_firewall.default {{project}}/{{firewall-rule-name}}
+   ```
+
+### 
